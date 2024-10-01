@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Username and password sent from form 
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $sql = "SELECT * FROM users WHERE username = '$username'";
+    $sql = "SELECT * FROM users WHERE username = '$username' AND password -'$password'";
         
     // Check if username exists and password is matched
     $result = mysqli_query($conn, $sql);
